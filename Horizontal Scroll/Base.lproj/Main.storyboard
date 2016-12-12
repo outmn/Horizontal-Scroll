@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XgF-A4-LfK">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="xXK-bj-pf7">
+            <objects>
+                <viewController id="XgF-A4-LfK" customClass="HomeViewController" customModule="Horizontal_Scroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UBc-90-f9k"/>
+                        <viewControllerLayoutGuide type="bottom" id="W6W-86-sQW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CUz-4c-QNa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tumblr_o8jhyiuOa31rbyt51o1_500" translatesAutoresizingMaskIntoConstraints="NO" id="Vuw-9U-lDL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkJ-2e-n0W">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Bng-eu-vbM">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwc-Qu-uQg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        </scrollView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Jwc-Qu-uQg" secondAttribute="trailing" constant="-8" id="MGa-Q9-Nt7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Jwc-Qu-uQg" secondAttribute="bottom" constant="-8" id="b4O-83-rpm"/>
+                                        <constraint firstItem="Jwc-Qu-uQg" firstAttribute="leading" secondItem="Bng-eu-vbM" secondAttribute="leadingMargin" constant="-8" id="cjd-Aq-Bm5"/>
+                                        <constraint firstItem="Jwc-Qu-uQg" firstAttribute="top" secondItem="Bng-eu-vbM" secondAttribute="topMargin" constant="-8" id="ube-DT-ncc"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vuw-9U-lDL" secondAttribute="trailing" id="16u-b9-Ylt"/>
+                            <constraint firstItem="W6W-86-sQW" firstAttribute="top" secondItem="ZkJ-2e-n0W" secondAttribute="bottom" id="4uO-FR-uzw"/>
+                            <constraint firstAttribute="trailing" secondItem="ZkJ-2e-n0W" secondAttribute="trailing" id="6E4-ny-nsu"/>
+                            <constraint firstItem="Vuw-9U-lDL" firstAttribute="top" secondItem="CUz-4c-QNa" secondAttribute="top" id="7v4-Ce-KTo"/>
+                            <constraint firstItem="W6W-86-sQW" firstAttribute="top" secondItem="Vuw-9U-lDL" secondAttribute="bottom" id="OMy-8O-CjN"/>
+                            <constraint firstItem="ZkJ-2e-n0W" firstAttribute="leading" secondItem="CUz-4c-QNa" secondAttribute="leading" id="XVl-KK-Slw"/>
+                            <constraint firstItem="Vuw-9U-lDL" firstAttribute="leading" secondItem="CUz-4c-QNa" secondAttribute="leading" id="bQb-PD-hWa"/>
+                            <constraint firstItem="ZkJ-2e-n0W" firstAttribute="top" secondItem="CUz-4c-QNa" secondAttribute="top" id="rdN-mK-5a5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Jwc-Qu-uQg" id="Oii-k0-N2m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yn-JO-ZYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tumblr_o8jhyiuOa31rbyt51o1_500" width="480" height="522"/>
+    </resources>
+</document>
